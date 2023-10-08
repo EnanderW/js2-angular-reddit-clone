@@ -1,0 +1,22 @@
+<h2>Create post</h2>
+<label>Title</label>
+<input #title />
+
+<br />
+<label>Content</label>
+<input #content />
+
+<br />
+
+<label>Tags</label>
+<input #tag placeholder="Add a tag" />
+<button (click)="addTag(tag.value); tag.value = ''">Add tag</button>
+<ul>
+  <li *ngFor="let tag of tags">
+    <span>{{ tag }}</span>
+    <button (click)="removeTag(tag)">-</button>
+  </li>
+</ul>
+
+<br />
+<button (click)="uploadPost(title.value, content.value)">Post</button>

@@ -1,0 +1,11 @@
+<article>
+  <div *ngIf="user" routerLink="/profiles/{{ user.id }}">
+    <div>
+      <img width="50" height="50" src="{{ user.image }}" />
+    </div>
+    <span>{{ user.username }}</span>
+  </div>
+  <div>
+    <p>{{ comment.body }}</p>
+  </div>
+</article>

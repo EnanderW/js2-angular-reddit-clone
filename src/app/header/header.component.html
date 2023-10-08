@@ -1,0 +1,6 @@
+<header>
+  <h1>Ang+</h1>
+  <input placeholder="Search posts." />
+  <button *ngIf="!isLoggedIn()" routerLink="/login">Login</button>
+  <button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+</header>

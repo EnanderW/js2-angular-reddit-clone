@@ -1,0 +1,6 @@
+<h2>Posts of #{{ tag }}</h2>
+<ul>
+  <li *ngFor="let post of posts">
+    <app-post-item [post]="post" [user]="getUser(post)"></app-post-item>
+  </li>
+</ul>

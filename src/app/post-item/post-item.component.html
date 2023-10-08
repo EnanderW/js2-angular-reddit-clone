@@ -1,0 +1,15 @@
+<article>
+  <div *ngIf="user" routerLink="/profiles/{{ user.id }}">
+    <div>
+      <img width="50" height="50" src="{{ user.image }}" />
+    </div>
+    <span>{{ user.username }}</span>
+  </div>
+  <div routerLink="/details/{{ post.id }}">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.body }}</p>
+  </div>
+  <ul>
+    <li *ngFor="let tag of post.tags">#{{ tag }}</li>
+  </ul>
+</article>

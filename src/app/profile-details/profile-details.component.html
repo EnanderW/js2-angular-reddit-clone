@@ -1,0 +1,12 @@
+<div *ngIf="user">
+  <h2>Other profile</h2>
+  <h2>{{ user.username }}</h2>
+  <img src="{{ user.image }}" />
+
+  <h2>Posts</h2>
+  <ul>
+    <li *ngFor="let post of posts">
+      <app-post-item [post]="post" [user]="user"></app-post-item>
+    </li>
+  </ul>
+</div>

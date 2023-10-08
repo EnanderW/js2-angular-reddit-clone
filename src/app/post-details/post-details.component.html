@@ -1,0 +1,20 @@
+<section>
+  <app-post-item *ngIf="post" [post]="post" [user]="user"></app-post-item>
+</section>
+
+<section>
+  <h2>Write comment</h2>
+  <input #newComment placeholder="What do you want to comment?" />
+  <button (click)="sendComment(newComment.value); newComment.value = ''">
+    Send
+  </button>
+</section>
+
+<section>
+  <h2>Comments</h2>
+  <ul *ngIf="comments">
+    <li *ngFor="let comment of comments">
+      <app-comment-item [comment]="comment" [user]="getUser(comment)"></app-comment-item>
+    </li>
+  </ul>
+</section>
